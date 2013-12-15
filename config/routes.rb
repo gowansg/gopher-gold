@@ -7,6 +7,8 @@ GopherGold::Application.routes.draw do
 
    get 'home', to: 'home#index'
 
+   get 'users/:user_id' => 'users#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
