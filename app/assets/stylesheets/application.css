@@ -16,6 +16,8 @@
 #footer {
   background-color: #2f4a6f;
   height: 20%;
+  min-height: 100px;
+  max-height: 300px;
   border-top: 1px solid #173457;
 }
 
