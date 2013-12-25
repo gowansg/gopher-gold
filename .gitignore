@@ -18,3 +18,5 @@
 /log/*.log
 /tmp
 
+# Ignore secret token 
+.secret

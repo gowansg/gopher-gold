@@ -9,4 +9,21 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-GopherGold::Application.config.secret_key_base = 'e9c481ee28be341453e68a454a3b4727c9de83a8b9f6ea2621cd23babe4f3a62e921dde4af02bc5d96c4be59872d817971e637d4a3f121b1849ca3624abedc64'
+
+#credit to: https://github.com/gitlabhq/gitlabhq/pull/4040/files
+require 'securerandom'
+
+def get_secret_key
+  secret_file = Rails.root.join('.secret')
+  if File.exist? secret_file
+    # Use the existing token.
+    File.read(secret_file).chomp
+  else
+    # Generate a new token of 64 random hex characters and store it in file.
+    secret = SecureRandom.hex(64)
+    File.write(secret_file, secret)
+    secret
+  end
+end
+
+GopherGold::Application.config.secret_key_base = get_secret_key

@@ -1,4 +1,14 @@
 GopherGold::Application.routes.draw do
+  resources :questions
+
+  resources :answer_choices
+
+  resources :responses
+
+  resources :users
+
+  resources :surveys
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
