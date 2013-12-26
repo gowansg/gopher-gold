@@ -12,6 +12,9 @@
  *= require_tree .
  */
 
+#footer-border {
+  border-bottom: 1px solid #000;
+}
 
 #footer {
   background-color: #2f4a6f;

@@ -1,4 +1,10 @@
 GopherGold::Application.routes.draw do
+  resources :question_types
+
+  resources :answer_types
+
+  resources :companies
+
   resources :questions
 
   resources :answer_choices
