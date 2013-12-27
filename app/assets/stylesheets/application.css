@@ -12,20 +12,21 @@
  *= require_tree .
  */
 
-#footer-border {
-  border-bottom: 1px solid #000;
-}
 
-#footer {
+#footer-wrapper {
   background-color: #2f4a6f;
-  height: 20%;
-  min-height: 100px;
-  max-height: 300px;
-  border-top: 1px solid #173457;
+  height: 300px;
+  margin-top: -300px; /*creates sticky footer effect*/
+  border-top: 1px solid #a7c4e7;
+  padding: 20px;
 }
 
 #main-wrapper {
-  min-height: 500px;
-  height: 80%;
-  margin-top: 70px;
+  /*border needs to be 1px taller than footer because of negative footer margin*/
+  border-bottom: 301px solid #000; 
+  min-height: 100%
+}
+
+#main {
+    margin-top: 70px;
 }
