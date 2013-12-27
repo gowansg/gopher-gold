@@ -11,10 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131223213806) do
+ActiveRecord::Schema.define(version: 20131225181727) do
 
   create_table "answer_choices", force: true do |t|
     t.integer  "question_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "answer_types", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "companies", force: true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "address_line"
+    t.string   "city"
+    t.integer  "zip"
+    t.string   "state"
+    t.integer  "survey_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "companies", ["user_id"], name: "index_companies_on_user_id"
+
+  create_table "question_types", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
