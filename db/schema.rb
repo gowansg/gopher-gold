@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20131223213806) do
 
   create_table "questions", force: true do |t|
     t.string   "text"
-    t.string   "tooltip"
     t.integer  "answer_choice_id"
     t.integer  "survey_id"
     t.datetime "created_at"
@@ -53,7 +52,7 @@ ActiveRecord::Schema.define(version: 20131223213806) do
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "password"
-    t.datetime "createdon"
+    t.datetime "created_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
