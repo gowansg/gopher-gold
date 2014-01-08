@@ -20,3 +20,6 @@
 
 # Ignore secret token 
 .secret
+
+# Ignoring node_modules, may change.
+/node_modules

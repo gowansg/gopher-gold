@@ -7,17 +7,17 @@
  *
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
- *
  *= require_self
+ *= require bootstrap
  *= require_tree .
  */
 
 
 #footer-wrapper {
-  background-color: #2f4a6f;
+  background-color: #18bc9c;
   height: 300px;
   margin-top: -300px; /*creates sticky footer effect*/
-  border-top: 1px solid #a7c4e7;
+  border-top: 1px solid #ccc;
   padding: 20px;
 }
 
@@ -29,4 +29,8 @@
 
 #main {
     margin-top: 70px;
+}
+
+.ember-view {
+  height: 100%;
 }

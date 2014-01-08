@@ -1,0 +1,8 @@
+<h1>Users</h1>
+{{#each}}
+  <ul>
+    <h4>{{#link-to 'user' id}}{{username}}{{/link-to}}</h4>
+  </ul>
+{{else}}
+  Looks like it's just you and me, buddy.
+{{/each}}

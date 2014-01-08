@@ -1,5 +1,5 @@
 // Fetched from channel: release, with url http://builds.emberjs.com/release/ember.min.js
-// Fetched on: 2013-12-25T14:44:12Z
+// Fetched on: 2013-12-27T05:51:24Z
 // ==========================================================================
 // Project:   Ember - JavaScript Application Framework
 // Copyright: Copyright 2011-2013 Tilde Inc. and contributors

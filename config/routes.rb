@@ -11,7 +11,9 @@ GopherGold::Application.routes.draw do
 
   resources :responses
 
-  resources :users
+  resources :users do
+    resources :surveys
+  end
 
   resources :surveys
 
@@ -19,9 +21,9 @@ GopherGold::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'home#index'
+   root 'application#index'
 
-   get 'home', to: 'home#index'
+ #  get 'home', to: 'home#index'
 
    get 'users/:user_id' => 'users#index'
 
